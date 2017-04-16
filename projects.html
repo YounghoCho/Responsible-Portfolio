@@ -1,0 +1,114 @@
+
+<style>
+/* Style the tab */
+div.tab2 {
+    float: left;
+    width: 15%;
+	height:100%;
+	border:1px solid white;
+}
+
+/* Style the buttons inside the tab */
+div.tab2 button {
+    display: block;
+    background-color: inherit;
+    padding: 30px 30px;
+    width: 100%;
+    border:none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+	margin:0;
+	font-weight:bold;
+}
+
+/* Change background color of buttons on hover */
+div.tab2 button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab2 button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent2 {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+	display:none;
+}
+</style>
+</head>
+<body>
+
+<table style="width:80%;height:710px;margin-left:10%;margin-top:30px;background-color:RGBA(35,35,35,0.6);padding:0;">
+<tr><td>
+<div>
+	<div class="tab2">
+	  <button class="tablinks2" onclick="openCity2(event, 'q')" style="color:#fff">Smart Mirror</button>
+	  <button class="tablinks2" onclick="openCity2(event, 'w')" style="color:#fff">O2O Flatform</button>
+	  <button class="tablinks2" onclick="openCity2(event, 'ee')" style="color:#fff">VR Camera</button>
+	  <button class="tablinks2" onclick="openCity2(event, 'r')" style="color:#fff">Community App</button>
+	  <button class="tablinks2" onclick="openCity2(event, 't')" style="color:#fff">Java Game</button>
+	  <button class="tablinks2" onclick="openCity2(event, 'y')" style="color:#fff">Cpp Game</button>
+	  <button class="tablinks2" onclick="openCity2(event, '')" style="color:#fff"></button>
+	  <button class="tablinks2" onclick="openCity2(event, '')" style="color:#fff"></button>
+	  <button class="tablinks2" onclick="openCity2(event, '')" style="color:#fff"></button>
+	  <button class="tablinks2" onclick="openCity2(event, '')" style="color:#fff"></button>
+
+	</div>
+
+	<div id="q" class="tabcontent2" style="color:white">
+	  <h3>Smart Mirror</h3>
+	  <p>In the upper rooms is placed a large collection of Milanese and central Italian ceramics, stuffs, furniture, bronzes, ivories, enamels, glass and historical relics; together with a picture gallery containing works by Vincenzo Foppa, Gianpietrino, Boltraffio, Crivelli, Pordenone, Morone, Cariani, Correggio, Antonello da Messina, Tiepolo, Guardi, Potter, Van Dyck and Ribeira.</p>
+	</div>
+
+	<div id="w" class="tabcontent2" style="color:white">
+	  <h3>O2O Flatform</h3>
+	  <p>Its damasks and other silk stuffs with patterns of extraordinary beauty surpassed in variety and splendour those of the other chief centres of silk-weaving, such as Florence and Genoa.</p> 
+	</div>
+
+	<div id="ee" class="tabcontent2" style="color:white">
+	  <h3>VR Camera</h3>
+	  <p>An active trade is carried on with Austria, especially through the Isakovets and Gusyatin custom-houses, corn, cattle, horses, skins, wool, linseed and hemp seed being exported, in exchange for wooden wares, linen, woollen stuffs, cotton, glass and agricultural implements.</p>
+	</div>
+	
+	<div id="r" class="tabcontent2" style="color:white">
+	  <h3>Community App</h3>
+	  <p>Cotton seed cake or meal (the residue after the oil is extracted) is one of the most valuable of feeding stuffs, as the following simple comparison between it and oats and corn will show: 500 lb 400 lb 700 lb 200 lb 200 to 300 lb Cotton Cotton seed meal, though poor in carbohydrates, the fatand energy-supplying ingredients, is exceedingly rich in protein, the nerveand muscle-feeding ingredients.</p>
+	</div>
+	
+	<div id="t" class="tabcontent2" style="color:white">
+	  <h3>Java Game</h3>
+	  <p>The principal manufactures are builders' hardware, locks and keys (the works of the Yale & Towne Manufacturing Company are here), woollen goods, dye stuffs, &c. The township of Stamford, known until 1642 by the Indian name of Rippowam, was settled in 1641 by twenty-nine persons who for religious reasons seceded from the Wethersfield church and joined the colony of New Haven./p>
+	</div>
+	
+	<div id="y" class="tabcontent2" style="color:white">
+	  <h3>CPP Game</h3>
+	  <p>Of food-stuffs the people do not produce enough for their own consumption.</p>
+	</div>
+</div>
+</td></tr>
+</table>
+
+	<script>
+	function openCity2(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent2");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks2");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+	</script>
