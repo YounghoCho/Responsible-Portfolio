@@ -3,11 +3,23 @@
 <head>
 <meta charset="utf-8">
 <title>조영호의 포트폴리오</title>
+ <!--apng 모듈 1 S-->
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://cdn.rawgit.com/davidmz/apng-canvas/v2.0.0/build/apng-canvas.min.js"></script>
+  <script>
+  $(function () {
+    APNG.ifNeeded()
+    .then(function () {
+      $("#one").find("img").each(function () { APNG.animateImage(this); });
+    })
+  });
+  </script>
+ <!--apng 모듈 1 E-->
 
 <style>
-body {font-family: "Lato", sans-serif; background-color:black;margin:0;
- background:url('./back.jpg');background-repeat:no-repeat;background-size: 100%;}
-
+.who{position:absolute;top:0;left:0;color:white;z-index:2;margin:10px 0px 0px 10px;}
+body {font-family: "Lato", sans-serif; margin:0;width:100%;}
+#one{position:absolute;background-color:#aaa;width:100%;z-index:-1;overflow:hidden;}
 /* Style the tab */
 div.tab {
     overflow: hidden;
@@ -50,21 +62,22 @@ div.tab button.active {
     font-size: 30px;
 	font-weight:bold;
 	color:white;
-	margin-top:50px;
+	margin-top:10%;
 	margin-right:220px;
 }
 
 .topright:hover {color: red;}
-
+#myDIV{display:none;}
 .container1{display:none;}
 #overlay1,#overlay2,#overlay3,#overlay4,#overlay5 {display:none;}
 @media all and (max-width:1024px){
-body{
-	background:url('./back.jpg');background-repeat:repeat-y;background-size: 100%;	
-}
+.who{position:absolute;top:0;right:0;color:white;z-index:2;margin:10px 0px 0px 10px;}
+body{ font-family: "Lato", sans-serif; margin:0;width:100%;height:720px;background-color:black;}
 .tab{display:none;}
+#one{position:absolute;top:20%;border:none;width:100%;z-index:-1;overflow:hidden;}
+
 /*버튼*/
-.container1{display:inline-block;margin:20px 0px 0px 20px;cursor: pointer;}
+.container1{display:inline-block;margin:42px 0px 0px 20px;cursor: pointer;}
 .bar1, .bar2, .bar3 {
 		width: 35px;
 		height: 5px;
@@ -126,7 +139,7 @@ body{
 #cut{width:105%;height:100%;overflow:auto;}
 }
 </style>
-
+<div class="who">APNG Background mady by Youngho Jo</div>
 <!--button S-->
 <div class="container1" onclick="myFunction(this)">
   <div class="bar1"></div>
@@ -154,12 +167,13 @@ body{
 	</div>
 </div>
 <!--toggle show E-->
-
 <!--오버레이 S-->
 <div id="overlay1" onclick="off(1)">
   <div id="text">
 	<div id="cut">
-		<?include('./aboutme.html');?>
+		<?php 
+		include('./aboutme.html');
+		?>
 	</div>
   </div>
 </div>
@@ -177,7 +191,7 @@ body{
 <div id="overlay4" onclick="off(4)">
   <div id="text">
   	<div id="cut">
-		<?include('./inerests.html');?>
+		<?include('./interests.html');?>
 	</div>
   </div>
 </div>
@@ -213,9 +227,6 @@ function on(value) {
 		case 2:
 			document.getElementById("overlay2").style.display = "block";
 			break;
-		case 3:
-			document.getElementById("overlay3").style.display = "block";
-			break;
 		case 4:
 			document.getElementById("overlay4").style.display = "block";
 			break;
@@ -248,9 +259,13 @@ function off(value) {
 }
 </script>
 
+ <!--apng 모듈 2 S (absolute 두번이 핵심)-->
+<div id="one">
+	<img src="./assets/animated.png" style="width:100%;border:none;"/>
+</div>
 
-
-<div class="tab" style="margin-left:10%;margin-top:-2%;width:80%;">
+<div class="tab" style="position:absolute;margin-left:10%;margin-top:5%;width:80%;z-index:1;">
+ <!--apng 모듈 2 E-->
   <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'a')">About Me</button>
   <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'b')">Skills</button>
   <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'c')">Projects</button>
@@ -292,7 +307,6 @@ function off(value) {
   include('./contact.html');
   ?>
 </div>
-
 <script>
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
