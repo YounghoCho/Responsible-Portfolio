@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
 <title>조영호의 포트폴리오</title>
  <!--apng 모듈 1 S-->
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
