@@ -1,20 +1,36 @@
+<meta charset="utf-8"/>
 <style>
 #scroll{width:102%;height:104%;overflow:scroll;}
-
+#aboutmecontent{font-size:19px;width:98%}
+#aboutmepc{display:block;}
+#aboutmemobile{display:none;}
+@media all and (max-width:1800px){
+#aboutmecontent{font-size:18px;}
+}
+@media all and (max-width:1600px){
+#aboutmecontent{font-size:16px;}
+}
 @media all and (max-width:1024px){
-	#scroll{width:108%;height:105%;overflow:scroll;}
+	#scroll{width:105%;height:105%;overflow:scroll;}
+	#aboutmepc{display:none;}
+	#aboutmemobile{display:block;}
+	#aboutmecontent{font-size:15px;width:80%;}
 }
 </style>
+
 <table style="width:80%;height:100%;margin-left:10%;margin-top:10%;background-color:RGBA(35,35,35,0.6);padding:0;">
 <tr><td>
-<div style="width:94%;height:600px;padding-top:3%;padding-left:30px;overflow:hidden">
+<div style="width:94%;height:100%;padding-top:1%;padding-left:20px;overflow:hidden">
 	<div id="scroll">
 	<font color="white">
-	<h3>Expertise</h3>
-	  <p>In the upper rooms is placed a large collection of Milanese and central Italian ceramics, stuffs, furniture, bronzes, ivories, enamels, glass and historical relics; together with a picture gallery containing works by Vincenzo Foppa, Gianpietrino, Boltraffio, Crivelli, Pordenone, Morone, Cariani, Correggio, Antonello da Messina, Tiepolo, Guardi, Potter, Van Dyck and Ribeira.</p>
+	<h2 id="aboutmepc">자기소개</h2>
+	<h3 id="aboutmemobile">자기소개</h3>
+	  <p id="aboutmecontent">&nbsp;정보 미디어 학과에 재학을 하며 C Programming을 배웠습니다. 프로그래밍으로 나의 상상력을 컴퓨터를 통해 표현할 수 있으며, 타인에게 결과물로 보여줄 수 있다는 점에 매력을 느꼈습니다. 그러나 학과 과정에서는 프로그래밍 경험을 쌓을 수 없어서 스스로 개발 역량을 기르기 위해 부단히 노력했습니다. 귀사는 교육의 기회가 많은 회사입니다. 귀사와 동행하며 꾸준히 성장해 나갈 미래를 기대하게 되며 다양한 인재들과의 교류와 협업을 기대하여 지원하게 되었습니다.
+	  <br><br>&nbsp;개발 활동을 하며 의사소통의 중요성을 깨닳았습니다. 2015년 12월, 팀 프로젝트를 진행하며 하이브리드 어플리케이션을 제작한 경험이 있습니다. 기획자, 디자이너, 개발자로 구성된 5인 팀이었지만 명확하게 리더를 정하지 않았습니다. 서로를 존중한다는 생각으로 의사표현을 적극적으로 하지 않았고 결국에는 과한 배려가 의사소통의 단절로 이어져 결국 프로젝트가 중단되었습니다. 저는 의사소통의 문제가 가장 큰 문제임을 발견했고 주 3회로 모여 프로젝트를 재개하길 팀원들에게 권했습니다. 처음에는 팀원들의 반응이 좋지 않았지만, 장소 예약을 모두 스스로 담당하기로 함으로써 팀원들의 참여를 유도할 수 있었습니다. 결과적으로 프로젝트를 완료하여 앱을 무사히 출시할 수 있었습니다. 협업을 하는 일에 있어서 만큼은, 먼저 나서서 헌신하고 봉사하는 마음으로 결과물들을 이끌어 내겠습니다.
+	  <br><br>&nbsp;사전 설계의 중요성에 대해 깨닳은 경험이 있습니다. 2016년 3월, 라즈베리를 활용한 VR 카메라가 부착된, 3D 프린팅 RC카 제작 프로젝트에 참여했습니다. 저는 Javascript언어로 라즈베리파이의 카메라 모듈에 VR효과를 추가했고, 구글 VR기어로 영상을 확인하기 위해 출력화면 분할 작업을 진행했습니다. 결과물을 시연하던 중, 모터의 열에 의해 3D 프린팅으로 만든 자체들이 손상되었고, 재질이 약해 심지어 부서지기까지 했습니다. 3D프린팅의 재질에 대한 연구와 모터의 발열량등을 고려하지 못했고 결국 프로젝트의 사전 설계가 제대로 되지않아 프로젝트를 중단할 수 밖에 없었습니다. 후에 다른 프로젝트를 진행할 때는 항상 사전설계에 가장 큰 비중을 두고 있습니다. 제가 귀사의 프로젝트에 참여하게 된다면 맡은 부분의 설계 내용과 구조를 꼼꼼히 분석하고, 책임을 다하여 조직적으로 문제를 해결해 나갈 것 입니다.
+	  <br><br>&nbsp;대학생활동안 프로젝트를 진행하면서 주로 독립적으로 개발을 진행 했으며 협업을 꺼려했습니다. 서로 다른 형식의 소스코드를 병합해야하는 불편함이 가장 큰 문제였습니다. 그러나 2017년 3월에 시작한 O2O 플랫폼 개발을 진행할 때에 비로소 협업의 중요성을 깨닳았습니다. 고객용, 업소용, 관리자용을 나누어 개발해야하는 큰 프로젝트였습니다. 혼자 기한내에 개발해 낼 수 없는 업무량이 주어졌고, 결국 협업을 하기로 결정했습니다. 같은 부분을 총 3명의 개발자가 GitHub를 통해 협업 개발 하였습니다. 초기에는 매부 불편하고 타 개발자의 코드에 못마땅한 적도 있었습니다. 그러나 규칙을 정하고 점차 효율적인 방법을 찾아가게 되면서 개발 속도가 극적으로 상승했습니다. 또한 다른 개발자들의 코드를 리뷰하며 시야를 넓히고 역량을 키울 수 있었습니다. 귀사의 프로젝트를 진행함에 있어서 협업의 두려움이 없는 지원자라고 말하고싶습니다.
+	 </p>
 
-	  <h3>Certifications</h3>
-	  <p>Boltraffio, Crivelli, Pordenone, Correggio, Antonello da Messina, Van Dyck and Ribeira.</p>
 	</font>
 	</div>
 </div>

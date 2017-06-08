@@ -1,9 +1,11 @@
+<?
+header("Content-Type: text/html; charset=UTF-8");
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
 
 <title>조영호의 포트폴리오</title>
  <!--apng 모듈 1 S-->
@@ -73,6 +75,7 @@ div.tab button.active {
 #myDIV{display:none;}
 .container1{display:none;}
 #overlay1,#overlay2,#overlay3,#overlay4,#overlay5 {display:none;}
+/*넓은화면*/
 @media all and (max-width:1024px){
 .who{position:absolute;top:0;right:0;color:white;z-index:2;margin:10px 0px 0px 10px;}
 body{ font-family: "Lato", sans-serif; margin:0;width:100%;height:720px;background-color:black;}
@@ -102,9 +105,9 @@ body{ font-family: "Lato", sans-serif; margin:0;width:100%;height:720px;backgrou
 /*탭*/
 #myDIV {
 	display:none;
-    width: 30%;
+    width: 40%;
     text-align: center;
-    background-color: RGBA(35,35,35,0.6);
+    background-color: RGBA(35,35,35,0.9);
     margin-top:20px;
 }
 .tabs{border:1px solid black;padding:18px;color:white;font-weight:bold;
@@ -154,12 +157,12 @@ body{ font-family: "Lato", sans-serif; margin:0;width:100%;height:720px;backgrou
 <!--toggle show S-->
 <div id="myDIV">
 	<div class="tabs" onclick="on(1)">
-		About Me
+		Profile
 	</div>
 	<div class="tabs" onclick="on(2)">
-		Skills
+		About Me
 	</div>
-	<div class="tabs" onclick="on(3)">
+	<div class="tabs" onclick="location.href='./projects_mobile.php'">
 		Projects
 	</div>
 	<div class="tabs" onclick="on(4)">
@@ -175,7 +178,7 @@ body{ font-family: "Lato", sans-serif; margin:0;width:100%;height:720px;backgrou
   <div id="text">
 	<div id="cut">
 		<?php 
-		include('./aboutme.html');
+		include('./profile.html');
 		?>
 	</div>
   </div>
@@ -183,12 +186,12 @@ body{ font-family: "Lato", sans-serif; margin:0;width:100%;height:720px;backgrou
 <div id="overlay2" onclick="off(2)">
   <div id="text">	
 	<div id="cut">
-		<?include('./skills.html');?>
+		<?include('./aboutme.html');?>
 	</div>
   </div>
 </div>
 <!--projects 모바일버전은 내부탭때문에 따로 이동한다-->
-<div id="overlay3" onclick="location.href='./projects_mobile.html'">
+<div id="overlay3" onclick="">
 </div>
 
 <div id="overlay4" onclick="off(4)">
@@ -264,13 +267,14 @@ function off(value) {
 
  <!--apng 모듈 2 S (absolute 두번이 핵심)-->
 <div id="one">
-	<img src="./assets/animated.png" style="width:100%;border:none;"/>
+	<img src="./assets/original.jpg" style="position:absolute;top:0;z-index:-3;width:100%;border:none;"/>
+	<img src="./assets/animated22.png" style="z-index:-2;width:100%;border:none;"/>
 </div>
 
 <div class="tab" style="position:absolute;margin-left:10%;margin-top:5%;width:80%;z-index:1;">
  <!--apng 모듈 2 E-->
-  <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'a')">About Me</button>
-  <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'b')">Skills</button>
+  <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'a')">Profile</button>
+  <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'b')">About Me</button>
   <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'c')">Projects</button>
   <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'd')">Interests</button>
   <button class="tablinks" style="width:20%;border:none;color:#fff;font-weight:bold; font-size:18pt;" onclick="openCity(event, 'e')">Contact</button>
@@ -279,14 +283,14 @@ function off(value) {
 <div id="a" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
   <?
-  include('./aboutme.html');
+  include('./profile.html');
   ?>
 </div>
 
 <div id="b" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
   <?
-  include('./skills.html');
+  include('./aboutme.html');
   ?>
 </div>
 
